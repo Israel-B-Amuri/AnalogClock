@@ -8,7 +8,101 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to top left, #B19955 100%, #A0C796 0%);
     height: 100vh;
-    background-image: linear-gradient(to top left, #B19955, #A0C796);
-    background-size: 500%;
+    font-size: 1.5rem;
+}
+.clock{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: rgba(100%, 100%, 100%, .5);
+    box-shadow: 8px 18px 10px rgba(0, 0, 0, .3);
+    border: 4px solid black;
+    position: relative;
+}
+.clock .number{
+    position: absolute;
+    --rotate:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotate));
+}
+
+.clock .number1{
+    --rotate: 30deg;
+}
+.clock .number2{
+    --rotate: 60deg;
+}
+.clock .number3{
+    --rotate: 90deg;
+}
+.clock .number4{
+    --rotate: 120deg;
+}
+.clock .number5{
+    --rotate: 150deg;
+}
+.clock .number6{
+    --rotate: 180deg;
+}
+.clock .number7{
+    --rotate: 210deg;
+}
+.clock .number8{
+    --rotate: 240deg;
+}
+.clock .number9{
+    --rotate: 270deg;
+}
+.clock .number10{
+    --rotate: 300deg;
+}
+.clock .number11{
+    --rotate: 330deg;
+}
+.word{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+}
+.clock .hand{
+    position: absolute;
+    z-index: 10;
+    --rotate:0;
+    bottom: 50%;
+    left: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: translateX(-50%) rotate(calc (var(--rotate) * 1deg));
+    transform-origin: bottom;
+    border: 1px solid #fff;
+}
+.clock .hand.second{
+    width: 4px;
+    height: 48%;
+    background-color: red;
+}
+.clock .hand.minute{
+    width: 8px;
+    height: 45%;
+    background-color: #000;
+}
+.clock .hand.hour{
+    width: 10px;
+    height: 40%;
+    background-color: #000;
+}
+.clock::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    border-radius: 50%;
+    z-index: 11;
 }
