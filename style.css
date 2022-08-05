@@ -10,6 +10,7 @@ body{
     align-items: center;
     background-image: linear-gradient(to top left, #B19955 100%, #A0C796 0%);
     height: 100vh;
+    width: 100%;
     font-size: 1.5rem;
 }
 .clock{
@@ -92,7 +93,7 @@ body{
 }
 .clock .hand.hour{
     width: 10px;
-    height: 40%;
+    height: 38%;
     background-color: #000;
 }
 .clock::after{
@@ -106,4 +107,11 @@ body{
     border-radius: 50%;
     z-index: 11;
     transform: translate(-50% -50%);
+}
+
+@media (max-width:45em) {
+    .clock{
+        width: 350px;
+        height: 350px;
+    }
 }
